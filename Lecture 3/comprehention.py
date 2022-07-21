@@ -18,6 +18,6 @@ def where(f, col):
 with open ('sample.txt', 'r') as f:
     data = f.read().split()
     res = select(int, data) # int - функция, преобразующая строки в числа на основе данных data
-    res= where(lambda x: not x%2, res) # выборка четных чисел
+    res= where(lambda x: not x%2, res) # выборка четных чисел, x%2==0 эквивалент not x%2
     res = select(lambda x: (x, x**2), res) # состаление кортежей из число + квадрат числа
     print(res)
